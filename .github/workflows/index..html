@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Top Mobile Games — Yasmina</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(140deg, #0d1321, #1b1f2f);
+      font-family: Arial, Helvetica, sans-serif;
+      color: #eef;
+    }
+
+    header {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #00e0c6;
+      margin-bottom: 10px;
+      animation: fadeIn 1.3s forwards;
+    }
+
+    .sub {
+      font-size: 16px;
+      opacity: 0.8;
+      animation: fadeIn 1.5s forwards;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #111827;
+      padding: 14px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.45);
+      transform: translateY(30px);
+      opacity: 0;
+      animation: fadeUp 1s forwards;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s;
+    }
+
+    .art {
+      height: 180px;
+      border-radius: 12px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    h3 {
+      margin-top: 15px;
+    }
+
+    .btn {
+      display: block;
+      text-decoration: none;
+      margin-top: 10px;
+      padding: 10px 15px;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+
+    .play {
+      background: #00e0c6;
+      color: #011;
+    }
+
+    .download {
+      background: #ffbb00;
+      color: #222;
+    }
+
+    .play:hover,
+    .download:hover {
+      opacity: 0.85;
+    }
+
+    @keyframes fadeUp {
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <h1>Top Trending Mobile Games</h1>
+    <p class="sub">Play, download, and enjoy the best mobile games!</p>
+  </header>
+
+  <div class="container">
+
+    <div class="grid">
+
+      <!-- Subway Surfers -->
+      <div class="card">
+        <div class="art" style="background-image: url('https://i.postimg.cc/zGK7wzKg/Subway-Surfears.jpg');"></div>
+        <h3>Subway Surfers</h3>
+        <p>Dodge obstacles and run as far as possible in this global hit game.</p>
+        <a class="btn play" href="https://www.kizi.com/games/subway-surfers" target="_blank">Play Now</a>
+        <a class="btn download" href="https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf" target="_blank">Download APK</a>
+      </div>
+
+      <!-- Temple Run -->
+      <div class="card">
+        <div class="art" style="background-image: url('https://i.postimg.cc/5NjkzWsm/temple-run2.jpg');"></div>
+        <h3>Temple Run</h3>
+        <p>Escape the cursed temple, jump, slide, and survive!</p>
+        <a class="btn play" href="https://www.crazygames.com/game/temple-run" target="_blank">Play Now</a>
+        <a class="btn download" href="https://play.google.com/store/apps/details?id=com.imangi.templerun" target="_blank">Download APK</a>
+      </div>
+
+      <!-- Candy Crush -->
+      <div class="card">
+        <div class="art" style="background-image: url('https://i.postimg.cc/3Rnnytpc/Install-Candy-Crush-Start-Crushing-Today.jpg');"></div>
+        <h3>Candy Crush</h3>
+        <p>Match candies, clear levels and enjoy endless fun puzzles!</p>
+        <a class="btn play" href="https://king.com/en/games/candycrush" target="_blank">Play Now</a>
+        <a class="btn download" href="https://play.google.com/store/apps/details?id=com.king.candycrushsaga" target="_blank">Download APK</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    console.log("Landing Page Loaded Successfully!");
+
+    // Scroll animation for cards
+    const cards = document.querySelectorAll('.card');
+    window.addEventListener('scroll', () => {
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+          card.style.transform = 'translateY(0)';
+          card.style.opacity = 1;
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
